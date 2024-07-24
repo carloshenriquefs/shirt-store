@@ -4,7 +4,7 @@ services:
     container_name: db
     restart: always
     environment:
-      POSTGRES_PASSWORD: banco123
+      POSTGRES_PASSWORD: ${PASSWORD_POSTGRES}
     ports:
       - 5432:5432
 
