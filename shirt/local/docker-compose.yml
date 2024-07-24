@@ -1,0 +1,16 @@
+services:
+  postgres-compose:
+    image: postgres
+    container_name: db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: banco123
+    ports:
+      - 5432:5432
+
+  shirt:
+    build:
+      context: ..
+      dockerfile: ./Dockerfile
+    ports:
+      - "8080:8080"
