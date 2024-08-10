@@ -14,6 +14,22 @@
 
 ##
 
+## 📂 - Estrutura de Pastas:
+```
+├── shirtstore
+│   ├── controller
+│   |  ├── exceptions
+|   ├── dto
+|   ├── entity
+|   ├── repository
+|   ├── service
+│   |  ├── impl
+|   |  |
+├── tests
+```
+
+## 
+
 ## 📋 - Diagrama de Classes:
 
 ```mermaid
