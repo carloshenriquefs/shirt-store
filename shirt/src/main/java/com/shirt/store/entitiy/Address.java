@@ -12,19 +12,12 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "tb_users")
-public class User implements Serializable {
+@Document(collection = "tb_address")
+public class Address implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @MongoId
     private UUID id;
-    private String name;
-    private String lastName;
-    private Credentials credentials;
-    private Address address;
-    private String birthday;
-    private String phoneNumber;
-    private Boolean notifications;
-    private Schedule schedule;
-
+    private String address;
+    private String number;
 }

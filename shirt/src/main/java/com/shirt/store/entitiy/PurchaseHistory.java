@@ -1,19 +1,24 @@
 package com.shirt.store.entitiy;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
-import java.util.List;
+import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Document(collection = "tb_purchases")
-public class PurchaseHistory {
+public class PurchaseHistory implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     @MongoId
     private UUID id;
@@ -24,7 +29,6 @@ public class PurchaseHistory {
     private BigDecimal discount;
     private List<Coupon> couponList;
 
-    private LocalDateTime createdAt = LocalDateTime.now();
-    private LocalDateTime updatedAt = LocalDateTime.now();
+    private Schedule schedule;
 
 }
